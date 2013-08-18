@@ -92,7 +92,7 @@ div.footer { color:#fff; background-color:#581617; text-align:center; padding:40
 /* Responsive design overrides for 940+ px. */
 @media only screen and (min-width:940px)
 {
-	div.post-content { font-size:1.1em; }
+	div.post-content { font-size:1.25em; }
 }
 
 /* Responsive design overrides for 1150+ px. */
@@ -113,7 +113,8 @@ div.footer { color:#fff; background-color:#581617; text-align:center; padding:40
 @media only screen and (min-width:1500px)
 {
 	div.mainbar { margin-right:440px; }
-	div.post-content { font-size:1.3em; }
+	div.mainbar p { margin-left:5em; margin-right:5em; }
+	div.post-content { font-size:1.38em; }
 	div.sidebar { width:420px; }
 	div.sidebar img { float:left; margin-right:10px; }
 }
