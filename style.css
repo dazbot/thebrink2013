@@ -78,6 +78,9 @@ div.sidebar ul li {
 	display: list-item;
 }
 
+/* Vote div. */
+div.sidebar div.vote a { display:inline-block; }
+
 /* Footer. */
 div.footer { color:#fff; background-color:#581617; text-align:center; padding:40px 0; clear:both; }
 
