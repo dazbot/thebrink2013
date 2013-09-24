@@ -8,7 +8,7 @@ get_header();
 
 // Show the most recent non-extras post on the home page.
 if (is_home()) {
-	query_posts('showposts=1&cat=-' . get_category_by_slug('extras')->term_id);
+	query_posts('showposts=1&cat=-' . get_category_by_slug('extras')->term_id . ',-' . get_category_by_slug('about')->term_id);
 }
 
 // Show the prev/next navigation buttons.
@@ -22,7 +22,6 @@ if (have_posts()) {
 // The WordPress loop.
 if (have_posts()) : 
 	while (have_posts()) : 
-
 		the_post();
 		echo "<div class=\"title\">";
 		echo $prevButton;
@@ -31,7 +30,7 @@ if (have_posts()) :
 				<?php if (!is_singular()) : ?><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php endif; ?>
 					<?php the_title(); ?>
 				<?php if (!is_singular()) : ?></a><?php endif; ?>
-			</h2>
+			</h1>
 		<?php
 		echo $nextButton;
 		echo "</div>";

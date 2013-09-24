@@ -1,5 +1,11 @@
 <?php
 
+// Set up category-specific single.php templates.
+add_filter('single_template', create_function(
+	'$t', 
+	'foreach((array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php"; } return $t;' )
+);
+
 // Register menus.
 function register_my_menus() {
 	register_nav_menus(
@@ -13,8 +19,8 @@ function get_prev_button() {
 
 	$navButton = "";
 	
-	if ((is_single() || is_home()) && !in_category('extras')) {
-		$prevPost = get_previous_post(false, get_category_by_slug('extras')->term_id);
+	if ((is_single() || is_home()) && !in_category('extras') && !in_category('about')) {
+		$prevPost = get_previous_post(true);
 		if ($prevPost != "") {
 			if ($prevPost != "") {
 				$navButton .= "<a href=\"" . get_permalink($prevPost->ID) . "\" class=\"prev prev-next\"></a>";
@@ -30,8 +36,8 @@ function get_next_button() {
 
 	$navButton = "";
 	
-	if ((is_single() || is_home()) && !in_category('extras')) {
-		$nextPost = get_next_post(false, get_category_by_slug('extras')->term_id);
+	if ((is_single() || is_home()) && !in_category('extras') && !in_category('about')) {
+		$nextPost = get_next_post(true);
 		if ($nextPost != "") {
 			if ($nextPost != "") {
 				$navButton .= "<a href=\"" . get_permalink($nextPost->ID) . "\" class=\"next prev-next\"></a>";
