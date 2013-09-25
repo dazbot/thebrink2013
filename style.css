@@ -204,11 +204,7 @@ table.piro_html div.piro_next_fake {display:none !important;}
 
 /* Character post. */
 div.character div.biography { float:right; width:300px; margin:1.5em; }
-<<<<<<< HEAD
-div.character h2 { background-color:#581617; color:#fff; padding:0.25em 0.5em; }
-=======
-div.character h2 { background-color:#581617; color:#fff; padding 0.25em 0.5em; }
->>>>>>> 957a5febef02e59c28a55756fe45b666f45e84f2
+div.character div.biography h2 { background-color:#581617; color:#fff; padding:0.25em 0.5em; }
 div.character div.biography p { margin-left:0.75em; margin-right:0; }
 div.character div.images { width:auto; min-width:200px; overflow:hidden; text-align:center; }
 div.character div.images img { width:100%; max-width:500px; margin-bottom:1.5em; vertical-align:top; }
