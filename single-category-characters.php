@@ -13,7 +13,11 @@ if (have_posts()) :
 		?>
 		<div class="title">
 			<h1 id="post-<?php the_ID(); ?>">
-				<?php the_title(); ?>
+                                <?php if(function_exists('bcn_display'))
+                                {
+                                        bcn_display();
+                                }?>
+				<?php //the_title(); ?>
 			</h1>
 		</div>
 		<div class="character">

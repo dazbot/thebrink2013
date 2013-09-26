@@ -201,6 +201,9 @@ table.piro_html a.piro_prev {display:none !important;}
 table.piro_html a.piro_next {display:none !important;}
 table.piro_html div.piro_next_fake {display:none !important;}
 
+/* Breadcrumb. */
+span.breadcrumb { font-size:50%; }
+span.breadcrumb span.full-size { font-size:200%; display:block; margin:0.15em 0; }
 
 /* Character post. */
 div.character div.biography { float:right; width:300px; margin:1.5em; }

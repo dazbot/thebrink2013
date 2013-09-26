@@ -1,10 +1,11 @@
 <?php
 
+/* No longer required. 
 // Set up category-specific single.php templates.
 add_filter('single_template', create_function(
 	'$t', 
 	'foreach((array) get_the_category() as $cat ) { if ( file_exists(TEMPLATEPATH . "/single-category-{$cat->slug}.php") ) return TEMPLATEPATH . "/single-category-{$cat->slug}.php"; } return $t;' )
-);
+); */
 
 // Register menus.
 function register_my_menus() {
