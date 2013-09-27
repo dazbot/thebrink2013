@@ -5,10 +5,12 @@
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<title><?php wp_title(); ?> <?php bloginfo( 'name' ); ?></title>
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/meanmenu.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/mosaic.css" type="text/css" media="screen" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/ie8.css" type="text/css" media="screen" />
+	<![endif]-->
 	<script type="text/javascript" src="//use.typekit.net/hwf8rlq.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

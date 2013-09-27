@@ -85,44 +85,6 @@ div.sidebar div.vote a { display:inline-block; }
 /* Footer. */
 div.footer { color:#fff; background-color:#581617; text-align:center; padding:40px 0; clear:both; }
 
-/* Responsive design overrides for 800+ px. */
-@media only screen and (min-width:800px)
-{
-	div.mainbar { margin-right:220px; }
-	div.sidebar { width:200px; position:absolute; top:0; right:0; padding:0; }
-	div.sidebar img { float:none; margin-bottom:10px; margin-right:0; }
-}
-
-/* Responsive design overrides for 940+ px. */
-@media only screen and (min-width:940px)
-{
-	div.post-content { font-size:1.25em; }
-}
-
-/* Responsive design overrides for 1150+ px. */
-@media only screen and (min-width:1150px)
-{
-	div.header img.banner { width:652px; float:left; }
-	div.desktop-menu-container { display:inherit; }
-	div.desktop-menu-container div.menu { padding-top:30px; }
-}
-
-/* Responsive design overrides for 1310+ px. */
-@media only screen and (min-width:1310px)
-{
-	div.desktop-menu-container div.menu { padding-top:47px; }
-}
-
-/* Responsive design overrides for 1500+ px. */
-@media only screen and (min-width:1500px)
-{
-	div.mainbar { margin-right:440px; }
-	div.mainbar p { margin-left:5em; margin-right:5em; }
-	div.post-content { font-size:1.38em; }
-	div.sidebar { width:420px; }
-	div.sidebar img { float:left; margin-right:10px; }
-}
-
 /* Comments. */
 /* ---------------------------------------------------------------- */
 div.comments-container {margin-top: 45px; background-color: #f2f2f2; border: 1px solid #ccc; border-radius: 6px;}
@@ -211,3 +173,41 @@ div.character div.biography h2 { background-color:#581617; color:#fff; padding:0
 div.character div.biography p { margin-left:0.75em; margin-right:0; }
 div.character div.images { width:auto; min-width:200px; overflow:hidden; text-align:center; }
 div.character div.images img { width:100%; max-width:500px; margin-bottom:1.5em; vertical-align:top; }
+
+/* Responsive design overrides for 800+ px. */
+@media only screen and (min-width:800px)
+{
+	div.mainbar { margin-right:220px; }
+	div.sidebar { width:200px; position:absolute; top:0; right:0; padding:0; }
+	div.sidebar img { float:none; margin-bottom:10px; margin-right:0; }
+}
+
+/* Responsive design overrides for 940+ px. */
+@media only screen and (min-width:940px)
+{
+	div.post-content { font-size:1.25em; }
+}
+
+/* Responsive design overrides for 1150+ px. */
+@media only screen and (min-width:1150px)
+{
+	div.header img.banner { width:652px; float:left; }
+	div.desktop-menu-container { display:inherit; }
+	div.desktop-menu-container div.menu { padding-top:30px; }
+}
+
+/* Responsive design overrides for 1310+ px. */
+@media only screen and (min-width:1310px)
+{
+	div.desktop-menu-container div.menu { padding-top:47px; }
+}
+
+/* Responsive design overrides for 1500+ px. */
+@media only screen and (min-width:1500px)
+{
+	div.mainbar { margin-right:440px; }
+	div.mainbar p { margin-left:5em; margin-right:5em; }
+	div.post-content { font-size:1.38em; }
+	div.sidebar { width:420px; }
+	div.sidebar img { float:left; margin-right:10px; }
+}
