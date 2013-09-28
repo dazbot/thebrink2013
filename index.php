@@ -34,7 +34,7 @@ if (have_posts()) :
 		<?php
 		echo $nextButton;
 		echo "</div>";
-		echo "<div class=\"post-content\">";
+		echo "<div class=\"post-content min-height\">";
 		the_content();
 		echo "</div>";
 		wp_link_pages();

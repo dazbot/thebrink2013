@@ -19,7 +19,10 @@ if (have_posts()) :
 				</span>
 			</h1>
 		</div>
-		<?php the_content();
+		<div class="min-height">
+			<?php the_content(); ?>
+		</div>
+		<?php
 		wp_link_pages();
 	endwhile;
 else :

@@ -47,6 +47,9 @@ div.desktop-menu-container div.menu ul li a:hover { background-color:#fff; color
 /* Content area. */
 div.content { background-color:#0c0c0c; position:relative; }
 
+/* Min-height styles. */
+div.min-height { min-height:25em; }
+
 /* Mainbar styles. */
 div.mainbar { background-color:#fff; min-height:1600px; }
 div.mainbar div.title { color:#e9e9e9; background-color:#0c0c0c; position:relative; }
