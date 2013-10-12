@@ -177,4 +177,7 @@ add_shortcode('posts-toc', 'write_posts_toc');
 // Turn on support for post thumbnails.
 add_theme_support('post-thumbnails');
 
+// Set the text for the Not Safe For Work plugin.
+define('MSFW_LONG_FORM', '[Image not safe for work. Click to view.]');
+
 ?>

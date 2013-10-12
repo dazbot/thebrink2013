@@ -177,6 +177,9 @@ div.character div.biography p { margin-left:0.75em; margin-right:0; }
 div.character div.images { width:auto; min-width:200px; overflow:hidden; text-align:center; }
 div.character div.images img { width:100%; max-width:500px; margin-bottom:1.5em; vertical-align:top; }
 
+/* Make-safe-for-work container. */
+span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; background-color:#581617 !important; text-transform:uppercase; }
+
 /* Responsive design overrides for 800+ px. */
 @media only screen and (min-width:800px)
 {
