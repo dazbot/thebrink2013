@@ -47,7 +47,7 @@ blockquote {
 
 /* Page title. */
 .title { color:#e9e9e9; position:relative; }
-.title h1 { margin:0 60px; padding:.67em 0; text-align:center; }
+.title h1 { margin:0 60px; padding:.67em 0; text-align:center; font-size:1.1em; }
 .title h1 a { color:#fff; }
 .title h1 a:hover { color:#ff0000; }
 
@@ -165,9 +165,16 @@ div.character div.images img { width:100%; max-width:500px; margin-bottom:1.5em;
 /* Make-safe-for-work container. */
 span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; background-color:#581617 !important; text-transform:uppercase; }
 
-/* Responsive design overrides for 940+ px. */
-@media only screen and (min-width:940px)
+/* Responsive design overrides for small devices (tablets). */
+@media only screen and (min-width:750px)
 {
+	.title h1 { font-size:1.5em; }
+}
+
+/* Responsive design overrides for medium devices (desktops). */
+@media only screen and (min-width:992px)
+{
+	.title h1 { font-size:2em; }
 	.post-content { font-size:1.25em; }
 }
 
