@@ -36,7 +36,7 @@ blockquote {
 .float-right { float:right; }
 .center { text-align:center; }
 .light-bg { background-color: #fff; }
-.top-gutter { padding-top:1px; }
+.page-gutters { padding:1px 8px 8px 8px; }
 
 /* Min-height styles. */
 .min-height { min-height:25em; }
