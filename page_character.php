@@ -22,7 +22,7 @@ if (have_posts()) :
 				<?php //the_title(); ?>
 			</h1>
 		</div>
-		<div class="character min-height light-bg">
+		<div class="post-content character min-height light-bg top-gutter">
 			<div class="biography">
 				<?php if (get_field('nickname') != ''): ?>
 					<?php if (strpos(get_field('nickname'), ',') !== FALSE) echo '<h2>Nicknames</h2>'; else echo '<h2>Nickname</h2>'; ?>

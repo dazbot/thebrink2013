@@ -19,7 +19,7 @@ if (have_posts()) :
 				</span>
 			</h1>
 		</div>
-		<div class="min-height light-bg">
+		<div class="post-content min-height light-bg top-gutter">
 			<?php the_content(); ?>
 		</div>
 		<?php
