@@ -15,8 +15,7 @@
 	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.10.2.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/mosaic.1.0.1.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.corner.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.color-2.1.0.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.meanmenu.2.0.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/thebrink.js"></script>
 
 	<?php wp_footer(); ?>

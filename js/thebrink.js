@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-	var originalMenuColor;
-
 	// Resize previous/next buttons on window resize.
 	$(window).resize(function() {
 		$('.title .prev-next').height($('.title h1').outerHeight(true) - 2);
@@ -13,16 +11,6 @@ $(document).ready(function() {
 		animation: 'slide'
 	});
 	$('.mosaic-block').corner();
-
-	// Animate the main menu colours.
-	originalMenuColor = $.Color($('div.desktop-menu-container div.menu ul li a').css('color')).toHexString();
-	$('div.desktop-menu-container div.menu ul li a').hover(
-		function() {$(this).animate({color:'#000'}, 600);},
-		function() {$(this).animate({color:originalMenuColor}, 400);}
-	);
-	
-	// Responsive menu.
-	$('.menu').meanmenu({meanScreenWidth:'940'});
 
 	// Google Analytics.
 	var _gaq = _gaq || [];
