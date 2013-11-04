@@ -1,9 +1,0 @@
-/* Reset responsive design overrides. */
-div.header img.banner { width:652px; float:left; }
-div.desktop-menu-container { display:inherit; }
-div.desktop-menu-container div.menu { padding-top:30px; }
-div.mainbar { margin-right:220px; }
-div.sidebar { width:200px; position:absolute; top:0; right:0; padding:0; }
-div.sidebar img { float:none; margin-bottom:10px; margin-right:0; }
-div.post-content { font-size:1.25em; }
-

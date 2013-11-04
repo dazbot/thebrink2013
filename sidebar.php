@@ -1,6 +1,6 @@
-<div class="sidebar">
+<div class="sidebar clearfix center-block">
 
-	<ul class="sidebar">
+	<ul>
 		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) : ?>
 		<?php endif; ?>
 	</ul>

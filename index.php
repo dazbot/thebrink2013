@@ -34,6 +34,7 @@ if (have_posts()) :
 		<?php
 		echo $nextButton;
 		echo "</div>";
+		echo "<div class=\"light-bg\">";
 		echo "<div class=\"post-content min-height\">";
 		the_content();
 		echo "</div>";
@@ -41,6 +42,7 @@ if (have_posts()) :
 		echo "<div class=\"prev-next-strip\">";
 		echo $prevButton;
 		echo $nextButton;
+		echo "</div>";
 		echo "</div>";
 	endwhile;
 else :
