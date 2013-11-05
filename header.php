@@ -42,11 +42,19 @@
 				</button>
 				<a class="navbar-brand" href="/"><img src="<?php bloginfo('template_directory'); ?>/images/filler.gif" alt="Return to home page"></a>
 			</div>
-			<?php wp_nav_menu(array(
-				'theme_location' => 'main-menu',
-				'container_class' => 'collapse navbar-collapse',
-				'menu_class' => 'nav navbar-nav'	
-			)); ?>
+			<div class="collapse navbar-collapse">
+				<?php wp_nav_menu(array(
+					'theme_location' => 'main-menu',
+					'container' => false,
+					'menu_class' => 'nav navbar-nav'	
+				)); ?>
+				<form class="navbar-form navbar-left searchform" role="search">
+					<div class="form-group">
+						<input name="s" type="text" class="searchfield" placeholder="Search" required maxlength="20">
+						<button type="submit" class="searchbutton">Go</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</nav>
 	
