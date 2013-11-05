@@ -79,7 +79,7 @@ div.prev-next-strip a.prev-next.next:hover { background-image:url(images/arrow-r
 div.sidebar div.vote a { display:inline-block; }
 
 /* Footer. */
-div.footer { color:#fff; background-color:#581617; text-align:center; padding:40px 0; clear:both; }
+div.footer { color:#fff; background-color:#581617; text-align:center; padding:40px 0; clear:both; margin-top:8px; }
 
 /* Comments. */
 /* ---------------------------------------------------------------- */
