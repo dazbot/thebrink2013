@@ -194,6 +194,9 @@ span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; backgro
 	outline:none; box-shadow:none;
 }
 
+/* Contact form. */
+.contactme_container { width:90%; max-width:600px; margin:0 auto; padding:1em 0;}
+
 /* Responsive design overrides for small devices (tablets). */
 @media only screen and (min-width:750px)
 {
