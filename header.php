@@ -48,10 +48,9 @@
 					'container' => false,
 					'menu_class' => 'nav navbar-nav'	
 				)); ?>
-				<form class="navbar-form navbar-left searchform" role="search">
+				<form class="navbar-form navbar-left search-form" role="search">
 					<div class="form-group">
-						<input name="s" type="text" class="searchfield" placeholder="Search" required maxlength="20">
-						<button type="submit" class="searchbutton">Go</button>
+						<input name="s" type="text" class="search-field" placeholder="Search" required maxlength="20">
 					</div>
 				</form>
 			</div>
