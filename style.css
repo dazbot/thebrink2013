@@ -80,6 +80,9 @@ div.sidebar div.vote a { display:inline-block; }
 
 /* Footer. */
 div.footer { color:#fff; background-color:#581617; text-align:center; padding:40px 0; clear:both; margin-top:8px; }
+div.footer p { margin:0.35em 0; }
+div.footer a { color:#fff; text-decoration:none; }
+div.footer a:hover { text-decoration:underline; }
 
 /* Comments. */
 /* ---------------------------------------------------------------- */

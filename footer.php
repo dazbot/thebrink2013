@@ -9,7 +9,9 @@
 	</div>
 	
 	<div class="footer">
-		&copy; 2010-2013, Darren Caddis, All Rights Reserved
+		<p>&copy; 2010-2013, <a href="http://www.facebook.com/DazBot">Darren Caddis</a>, All Rights Reserved</p>
+		<p><a href="/contact-me">Contact Me</a></p>
+		<p><a href="http://topwebfiction.com/vote.php?for=the-brink">Vote For The Brink!</a></p>
 	</div>
 
 	<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.10.2.min.js"></script>
