@@ -56,7 +56,7 @@ blockquote {
 .mosaic-block a { color:#fff; text-decoration:none; }
 
 /* Post content. */
-.post-content p { margin-left:1.2em; margin-right:1.2em; }
+.post-content > p { margin-left:1.2em; margin-right:1.2em; }
 .post-content div.mosaic-block { margin-left:5px; margin-right:5px; }
 
 /* Prev/next navigation. */
@@ -217,7 +217,7 @@ span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; backgro
 @media only screen and (min-width:1600px)
 {
 	.post-content { font-size:1.38em; }
-	.post-content p { margin-left:5em; margin-right:5em; }
+	.post-content > p { margin-left:5em; margin-right:5em; }
 	.sidebar { width:420px; }
 }
 
