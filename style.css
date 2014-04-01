@@ -210,13 +210,13 @@ span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; backgro
 @media only screen and (min-width:992px)
 {
 	.title h1 { font-size:2em; }
-	.post-content { font-size:1.25em; }
+	.post-content { font-size:1.0em; }
 }
 
 /* Responsive design overrides for 1600+ px. */
 @media only screen and (min-width:1600px)
 {
-	.post-content { font-size:1.38em; }
+	.post-content { font-size:1.25em; }
 	.post-content > p { margin-left:5em; margin-right:5em; }
         .post-content > blockquote { margin-left:6em; margin-right:6em; }
 	.sidebar { width:420px; }
