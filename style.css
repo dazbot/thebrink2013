@@ -59,6 +59,9 @@ blockquote {
 .post-content > p { margin-left:1.2em; margin-right:1.2em; }
 .post-content div.mosaic-block { margin-left:5px; margin-right:5px; }
 
+/* Mono blockquote. */
+blockquote.mono { font-family:Courier New, Courier, monospace; font-style:normal; font-size:0.95em; }
+
 /* Prev/next navigation. */
 div.prev-next-strip { position:relative; height:60px; margin:40px 20px 10px 20px; border-top:1px solid #696969; padding:50px 0; }
 a.prev-next { width:46px; position:absolute; top:0; height:100%; }
