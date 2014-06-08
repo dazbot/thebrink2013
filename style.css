@@ -56,8 +56,10 @@ blockquote {
 .mosaic-block a { color:#fff; text-decoration:none; }
 
 /* Post content. */
-.post-content > p { margin-left:1.2em; margin-right:1.2em; }
+.post-content > p, .post-content > ol.footnotes { margin-left:1.2em; margin-right:1.2em; }
 .post-content div.mosaic-block { margin-left:5px; margin-right:5px; }
+
+ol.footnotes{font-size:0.8em; color:#666666; font-style:italic; }
 
 /* Mono blockquote. */
 blockquote.mono { font-family:Courier New, Courier, monospace; font-style:normal; font-size:0.95em; }
@@ -220,7 +222,7 @@ span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; backgro
 @media only screen and (min-width:1600px)
 {
 	.post-content { font-size:1.25em; }
-	.post-content > p { margin-left:5em; margin-right:5em; }
+	.post-content > p, .post-content > ol.footnotes { margin-left:5em; margin-right:5em; }
         .post-content > blockquote { margin-left:6em; margin-right:6em; }
 	.sidebar { width:420px; }
 }
