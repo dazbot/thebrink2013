@@ -101,31 +101,37 @@ function write_posts_toc_banners($myPosts) {
 
 // Write the posts table of contents as a series of mosaics.
 function write_posts_toc_mosaics($myPosts) {
-	foreach ($myPosts as $myPost) :
-		?>
-		<div class="mosaic-block bar2">
-			<a href="<?php echo get_permalink($myPost->ID); ?>" class="mosaic-overlay">
-				<div class="mosaic-cell">
-					<h3><?php echo $myPost->post_title; ?></h3>
-					<p><?php echo mysql2date("j M Y", $myPost->post_date); ?></p>
-				</div>
-				<div class="clear"></div>
-				<div class="mosaic-cell">
-					<?php echo $myPost->post_excerpt; ?>
-				</div>
-			</a>
-			<div class="mosaic-backdrop">
-				<?php echo get_the_post_thumbnail($myPost->ID, 'full'); ?>
-			</div>
-		</div>
-		<?php
-	endforeach;
-	echo "<div class=\"clear\"></div>";
+    foreach ($myPosts as $myPost) :
+        writeMosaic(
+                get_permalink($myPost->ID), 
+                $myPost->post_title, 
+                mysql2date("j M Y", $myPost->post_date),
+                $myPost->post_excerpt,
+                get_the_post_thumbnail($myPost->ID, 'full')
+                );
+    endforeach;
+    echo "<div class=\"clear\"></div>";
 }
 
-
-
-
+function writeMosaic($postPermalink, $postTitle, $postDate, $postExcerpt, $postThumbnail) {
+    ?>
+    <div class="mosaic-block bar2">
+        <a href="<?php echo $postPermalink; ?>" class="mosaic-overlay">
+            <div class="mosaic-cell">
+                <h3><?php echo $postTitle; ?></h3>
+                <p><?php echo $postDate; ?></p>
+            </div>
+            <div class="clear"></div>
+            <div class="mosaic-cell">
+                <?php echo $postExcerpt; ?>
+            </div>
+        </a>
+        <div class="mosaic-backdrop">
+            <?php echo $postThumbnail; ?>
+        </div>
+    </div>
+    <?php
+}
 
 //////// Custom Comments List.
 function zbench_mytheme_comment($comment, $args, $depth) {
@@ -166,6 +172,52 @@ function zbench_mytheme_comment($comment, $args, $depth) {
 	}
 }
 
+// Write an episode for display on the home page.
+function writeHomeEpisode($order, $description) {
+    
+        // Find the first episode.
+        $episodeQuery = new WP_Query(array(
+            'category_name' => 'story',
+            'orderby' => 'date',
+            'order' => $order,
+            'posts_per_page' => 1
+        ));
+
+        // The WordPress loop.
+        if ($episodeQuery->have_posts()) : 
+            while ($episodeQuery->have_posts()) :
+                $episodeQuery->the_post();
+                $permalink = get_permalink($post->ID);
+                ?>
+
+                <div class="home-episode" onclick="window.location = '<?php echo $permalink; ?>';">
+
+                    <?php
+                        writeMosaic(
+                                 $permalink, 
+                                 get_the_title(), 
+                                 mysql2date("j M Y", get_the_date()),
+                                 $post->post_excerpt,
+                                 get_the_post_thumbnail($post->ID, 'full')
+                                 );
+                        ?>
+
+                    <div class="description">
+                        View the <?php echo $description; ?> episode:<br><?php echo get_the_title(); ?>
+                    </div>
+                    
+                    <div class="clear"></div>
+                    
+                </div>
+
+                <?php
+           endwhile;
+        endif;
+
+        wp_reset_postdata();
+    
+}
+
 // Register sidebar.
 if (function_exists('register_sidebar')) {
 	register_sidebar();
@@ -179,5 +231,3 @@ add_theme_support('post-thumbnails');
 
 // Set the text for the Not Safe For Work plugin.
 define('MSFW_LONG_FORM', '[Image not safe for work. Click to view.]');
-
-?>

@@ -6,11 +6,6 @@ $nextButton = "";
 // Get the header template.
 get_header();
 
-// Show the most recent non-extras post on the home page.
-if (is_home()) {
-	query_posts('showposts=1&cat=-' . get_category_by_slug('extras')->term_id . ',-' . get_category_by_slug('about')->term_id);
-}
-
 // Show the prev/next navigation buttons.
 if (have_posts()) {
 	the_post();
@@ -50,14 +45,9 @@ else :
 endif;
 
 // Show comments if a single post is shown.
-if (is_single() || is_home()) {
+if (is_single()) {
 	$withcomments = 1;
 	comments_template();
-}
-
-// Show the prev/next page links if multiple posts are shown.
-if (!is_home()) {
-	wp_pagenavi();
 }
 
 // Show the footer.

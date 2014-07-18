@@ -174,6 +174,33 @@ div.character div.images img { width:100%; max-width:500px; margin-bottom:1.5em;
 /* Make-safe-for-work container. */
 span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; background-color:#581617 !important; text-transform:uppercase; }
 
+/* Home page banner. */
+div.banner {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4em;
+    font-style: italic;
+}
+
+/* Home page episode box. */
+.home-episode {
+    color: #fff;
+    margin: 20px;
+    padding: 10px 0 0 5px;
+    border: 1px solid #262626;
+    border-radius: 10px;
+}
+.home-episode:hover {
+    background-color: #581617;
+    cursor: pointer;
+}
+.home-episode .mosaic-block {
+    margin-right: 20px !important;
+}
+.home-episode .description {
+    margin-top:10px;
+}
+
 /* Search form. */
 .search-form {
 	margin-top:12px;
@@ -216,6 +243,7 @@ span.msfw { display:block; margin:1em; text-align:center; padding:4em 0; backgro
 {
 	.title h1 { font-size:2em; }
 	.post-content { font-size:1.0em; }
+        .margin-fix { margin-right: 0; }
 }
 
 /* Responsive design overrides for 1600+ px. */

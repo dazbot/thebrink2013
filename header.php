@@ -59,6 +59,6 @@
 	
 	<div class="container full-width">
 
-		<div class="row">
+		<div class="row margin-fix">
 
 			<div class="col-sm-9">
