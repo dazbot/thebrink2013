@@ -203,7 +203,7 @@ function writeHomeEpisode($order, $description) {
                         ?>
 
                     <div class="description">
-                        View the <?php echo $description; ?> episode:<br><?php echo get_the_title(); ?>
+                        Read the <?php echo $description; ?> episode:<br><?php echo get_the_title(); ?>
                     </div>
                     
                     <div class="clear"></div>
