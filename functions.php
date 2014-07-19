@@ -102,7 +102,7 @@ function write_posts_toc_banners($myPosts) {
 // Write the posts table of contents as a series of mosaics.
 function write_posts_toc_mosaics($myPosts) {
     foreach ($myPosts as $myPost) :
-        writeMosaic(
+        write_mosaic(
                 get_permalink($myPost->ID), 
                 $myPost->post_title, 
                 mysql2date("j M Y", $myPost->post_date),
@@ -113,7 +113,7 @@ function write_posts_toc_mosaics($myPosts) {
     echo "<div class=\"clear\"></div>";
 }
 
-function writeMosaic($postPermalink, $postTitle, $postDate, $postExcerpt, $postThumbnail) {
+function write_mosaic($postPermalink, $postTitle, $postDate, $postExcerpt, $postThumbnail) {
     ?>
     <div class="mosaic-block bar2">
         <a href="<?php echo $postPermalink; ?>" class="mosaic-overlay">
@@ -173,7 +173,7 @@ function zbench_mytheme_comment($comment, $args, $depth) {
 }
 
 // Write an episode for display on the home page.
-function writeHomeEpisode($order, $description) {
+function write_home_episode($order, $description) {
     
         // Find the first episode.
         $episodeQuery = new WP_Query(array(
@@ -192,8 +192,12 @@ function writeHomeEpisode($order, $description) {
 
                 <div class="home-episode" onclick="window.location = '<?php echo $permalink; ?>';">
 
+                    <div class="description">
+                        Read the <?php echo $description; ?> episode:<br><?php echo get_the_title(); ?>
+                    </div>
+                    
                     <?php
-                        writeMosaic(
+                        write_mosaic(
                                  $permalink, 
                                  get_the_title(), 
                                  mysql2date("j M Y", get_the_date()),
@@ -202,10 +206,6 @@ function writeHomeEpisode($order, $description) {
                                  );
                         ?>
 
-                    <div class="description">
-                        Read the <?php echo $description; ?> episode:<br><?php echo get_the_title(); ?>
-                    </div>
-                    
                     <div class="clear"></div>
                     
                 </div>
@@ -217,6 +217,18 @@ function writeHomeEpisode($order, $description) {
         wp_reset_postdata();
     
 }
+
+// Alter the main query.
+function alter_query($query) {
+
+    // Only show the 'story' category on the home page.
+    if ($query->is_home() && $query->is_main_query()) {
+        $query->set('category_name', 'story');
+        $query->set('posts_per_page', 16);
+    }
+    
+}
+add_action('pre_get_posts', 'alter_query');
 
 // Register sidebar.
 if (function_exists('register_sidebar')) {
